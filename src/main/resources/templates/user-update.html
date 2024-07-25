@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <title>Update</title>
+</head>
+<body>
+<h1>Update</h1>
+<form th:action="@{/user-update}" th:object="${user}" method="post">
+    <div>
+        <label for="id" >ID:</label>
+        <input type="number" th:field="*{id}" id="id"  readonly>
+    </div>
+    <br/>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" th:field="*{name}" id="name" >
+    </div>
+    <br/>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" th:field="*{email}" id="email" >
+    </div>
+    <br/>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" th:field="*{password}" id="password" readonly>
+    </div>
+    <br/>
+      <div>
+        <label for="role">Role:</label>
+        <input type="text" th:field="*{role}" id="role">
+    </div>
+    <input type="submit" value="Update">
+
+</form>
+</body>
+</html>
